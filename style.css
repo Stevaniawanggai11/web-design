@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-.container{
+container{
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -35,7 +35,7 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    margin: 42px;
+    margin: 0 42px;
 }
 nav ul li a{
     text-decoration: none;
@@ -55,14 +55,104 @@ nav ul li a{
     position:relative;
 }
 .back-video{
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 0;
     width: 100%;
     height: auto;
     z-index: -100;
 }
+.left-col h1{
+    color: #444;
+    font-size: 45px;
+    padding-left: 60px;
+    position: relative;
+}
+.left-col h1::before{
+    content: none;
+    background: hsl(235, 100%, 43%);
+    height: 80%;
+    width: 8px;
+    border-radius: 5px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    
+}
+.right-col h3{
+    color: #fff;
+    font-weight: 500;
+    padding-left: 50px;
+    position: absolute;
+    bottom: 120px;
+}
+
+.right-col h3 ::before{
+    content: none;
+    background: #fff;
+    height: 80%;
+    width: 8px;
+    border-radius: 5px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.play-icon{
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+.team{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+
+}
+
+.user-col{
+    flex-basis: 27%;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 1s;
+    position: relative;
+}
 
 
+.user-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.info{
+    opacity: 0;
+    transition: opacity 1s;
+}
+.info p{
+    color: #555;
+    font-weight: 600;
+}
+.user-col :hover .info{
+    opacity: 1;
+}
+.user-col :hover{
+    transform: translateY(-30px);
 
+}
 
+.user-col .arrow-icon{
+    width: 50px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.user-col :hover .arrow-icon{
+    opacity: 0;
+}
+.white-menu{
+    color: #fff;
+}
