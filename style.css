@@ -2,10 +2,10 @@
    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
-container{
+.container{
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -32,11 +32,13 @@ nav ul{
     flex: 1;
     text-align: right;
     margin-right: 150px;
+
 }
 nav ul li{
     display: inline-block;
     margin: 0 42px;
 }
+
 nav ul li a{
     text-decoration: none;
     color: #000;
@@ -45,23 +47,24 @@ nav ul li a{
 
 .left-col{
     flex-basis: 62%;
-    padding: 10% 5% 0;
+    padding: 10% 5%  0;
 }
-
 .right-col{
     flex-basis: 38%;
-    padding: 10% 3% 0;
+    padding: 20% 5% 0;
     background: rgba(71,0,204,0.6);
     position:relative;
 }
 .back-video{
-    position: relative;
+    position: absolute;
     right: 0;
     bottom: 0;
     width: 100%;
     height: auto;
     z-index: -100;
 }
+
+
 .left-col h1{
     color: #444;
     font-size: 45px;
@@ -69,16 +72,15 @@ nav ul li a{
     position: relative;
 }
 .left-col h1::before{
-    content: none;
-    background: hsl(235, 100%, 43%);
+    content: '';
+    background: #0011db;
     height: 80%;
     width: 8px;
     border-radius: 5px;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    position: absolute;
-    
+    position: absolute;    
 }
 .right-col h3{
     color: #fff;
@@ -88,11 +90,11 @@ nav ul li a{
     bottom: 120px;
 }
 
-.right-col h3 ::before{
-    content: none;
+.right-col h3::before{
+    content: '';
     background: #fff;
-    height: 80%;
-    width: 8px;
+    height: 100%;
+    width: 6px;
     border-radius: 5px;
     left: 10px;
     top: 50%;
@@ -105,13 +107,12 @@ nav ul li a{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%);
 }
 .team{
     display: flex;
     justify-content: space-around;
     margin-top: 80px;
-
 }
 
 .user-col{
@@ -135,12 +136,11 @@ nav ul li a{
     color: #555;
     font-weight: 600;
 }
-.user-col :hover .info{
+.user-col:hover .info{
     opacity: 1;
 }
-.user-col :hover{
+.user-col:hover{
     transform: translateY(-30px);
-
 }
 
 .user-col .arrow-icon{
@@ -149,6 +149,7 @@ nav ul li a{
     bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
+    transition: opacity 1s;
 }
 .user-col :hover .arrow-icon{
     opacity: 0;
